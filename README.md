@@ -17,22 +17,22 @@ messages. The messages themselves are a simple structure as defined below:
 
 Implement the message passing library using the following API:
 
-a) message_t* new_message(): Threads call this function to get an available message
+a) **message_t* new_message()**: Threads call this function to get an available message
 struct from the library. If the library is unable to provide a free message struct then this
 function returns NULL.
 
-b) void delete_message(message_t* msg): Threads call this function to return a
+b) **void delete_message(message_t* msg)**: Threads call this function to return a
 message struct back to the message library. After calling delete_message the thread
 will no longer use that message struct and the message library is free to give it out to
 other threads that call new_message
 
-c) int send(uint8_t destination_id, message_t* msg): Threads may use this
+c) **int send(uint8_t destination_id, message_t* msg)**: Threads may use this
 function to send a message to another thread. The destination_id is the ID of the
 thread the message should be delivered to and msg is the message to be delivered. A
 response code should be returned where 0 indicates success and non-0 indicates an
 error.
 
-d) int recv(uint8_t receiver_id, message_t* msg): Threads may use this
+d) **int recv(uint8_t receiver_id, message_t* msg)**: Threads may use this
 function to receive any pending incoming messages. The receiver_id is the ID of the
 thread that wishes to receive a message. The msg argument is an output, and the
 implementation of this function should set it to point to a message destined to
@@ -41,7 +41,10 @@ success and non-0 indicates error.
 
 What we are evaluating in your solution:
 ● Correctness (i.e., does it produce the correct results)
+
 ● Consideration of embedded programming principles
+
 ● Comprehensiveness of test cases
+
 ● General cleanliness of the code (i.e., consistent formatting, proper use of comments and
 docstrings, appropriate use of functions, ease of understanding)
