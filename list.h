@@ -17,8 +17,8 @@ class Link {
 public:
     Link* next;
     message_t* msg;
+    Link(message_t* newmsg);
 };
 
 int list_push(List* dest, message_t* msg);
-
 #endif

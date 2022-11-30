@@ -17,5 +17,5 @@ int send(uint8_t destination_id, message_t* msg) {
 }
 
 int recv(uint8_t receiver_id, message_t* msg) { //reciever_id would be itself
-    msg = list_pop(&msg_queues[receiver_id]);
+    msg = msg_queues[receiver_id].list_pop();
 }
