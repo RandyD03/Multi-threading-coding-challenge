@@ -7,10 +7,10 @@ List::List() { //creates datapath for thread
     length = 0;
 }
 
-int List::list_push(message_t* msg) {   // pushes msg to another thread
-    lock.lock();
+int list_push(List* dest, message_t* msg) {   // pushes msg to another thread
+    dest->lock.lock();
 
-    lock.unlock();
+    dest->lock.unlock();
 }
 
 message_t* List::list_pop() { //pops from own list
