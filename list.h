@@ -1,8 +1,10 @@
-#ifndef LIST.H
-#define LIST.H
+#ifndef LIST_H
+#define LIST_H
 
-#include <msg_lib.h>   /* message_t */
+#include "msg_lib.h"   /* message_t */
+#include "link.h"
 #include <stdlib.h>
+#include <mutex>
 
 class List {
 public:
@@ -11,13 +13,7 @@ public:
     size_t length;
     std::mutex lock;    // each list has their own lock because multiple locks may be in use at the same time
     message_t* list_pop();
-};
-
-class Link {
-public:
-    Link* next;
-    message_t* msg;
-    Link(message_t* newmsg);
+    List();
 };
 
 int list_push(List* dest, message_t* msg);

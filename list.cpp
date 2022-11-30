@@ -1,15 +1,10 @@
-#include <list.h>
-#include <mutex>
+#include "list.h"
 
-//constructors
+//constructor
 List::List() { //creates datapath for thread
     head = nullptr;
     tail = nullptr;
     length = 0;
-}
-Link::Link(message_t* newmsg) {
-    next = nullptr;
-    msg = newmsg;
 }
 
 int list_push(List* dest, message_t* msg) {   // pushes msg to another thread

@@ -1,5 +1,5 @@
-#include <msg_lib.h>
-#include <list.h>
+#include "msg_lib.h"
+#include "list.h"
 
 
 List msg_queues[255];   //each element can store one thread
