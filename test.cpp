@@ -9,24 +9,26 @@ void thread_function(uint8_t queue_id); // msg_queues[queue_id]
 int main() {
 
     std::thread threadobj1(thread_function,1);
-    // std::thread threadobj2(thread_function,2);
-    // std::thread threadobj3(thread_function,3);
+    std::thread threadobj2(thread_function,2);
+    std::thread threadobj3(thread_function,3);
 
     threadobj1.join();
-    // threadobj2.join();
-    // threadobj3.join();
+    threadobj2.join();
+    threadobj3.join();
     return 0;
 }
 
+//test function to randomly send and recieve msg
 void thread_function(uint8_t queue_id) {
-    for(int i = 0; i < 4 /*create 4 messages*/; i++) {
+    for(int i = 0; i < 1; i++) {
         message_t* msg = new_message();
         if(new_message != nullptr) {
             msg->data[0] = i;
             msg->len = 1;   //only store one element for this test case
-            send(queue_id + 1, msg); 
+            send(queue_id + i, msg); 
+            cout << "sent" << endl;
         }
-
+    }
         //print output
         cout << "thread " << queue_id << "data: " << endl;
         for(int i = 0; i < msg_queues[queue_id].head->msg->len; i++) {
@@ -45,5 +47,4 @@ void thread_function(uint8_t queue_id) {
             }
         }
         cout << "end" << endl << endl;
-    }
 }
