@@ -1,20 +1,20 @@
-#include "list.h"
-#include "msg_lib.h"
 #include "globals.h"
 #include <iostream>
 using namespace std;
+
+extern List msg_queues[255];
 
 void thread_function(uint8_t queue_id); // msg_queues[queue_id]
 
 int main() {
 
     std::thread threadobj1(thread_function,1);
-    std::thread threadobj2(thread_function,2);
-    std::thread threadobj3(thread_function,3);
+    // std::thread threadobj2(thread_function,2);
+    // std::thread threadobj3(thread_function,3);
 
     threadobj1.join();
-    threadobj2.join();
-    threadobj3.join();
+    // threadobj2.join();
+    // threadobj3.join();
     return 0;
 }
 
@@ -29,7 +29,7 @@ void thread_function(uint8_t queue_id) {
 
         //print output
         cout << "thread " << queue_id << "data: " << endl;
-        for(int i = 0; i < msg_queues[queue_id]->head->msg.length; i++) {
+        for(int i = 0; i < msg_queues[queue_id].head->msg->len; i++) {
             message_t* m;
 
             try {

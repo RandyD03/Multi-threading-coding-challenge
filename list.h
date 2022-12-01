@@ -1,11 +1,10 @@
 #ifndef LIST_H
 #define LIST_H
 
-#include "msg_lib.h"   /* message_t */
-#include "link.h"
 #include <stdlib.h>
 #include <mutex>
 #include <thread>
+#include "list.h"
 
 class List {
 public:
@@ -16,4 +15,6 @@ public:
     message_t* list_pop();
     List();
 };
+
+int list_push(List* dest, message_t* msg);
 #endif

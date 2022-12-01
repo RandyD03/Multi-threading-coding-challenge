@@ -1,6 +1,9 @@
 #include "msg_lib.h"
-#include "globals.h"
+#include "link.h"
+#include "list.h"
 #include <new>
+
+extern List msg_queues[255];
 
 message_t *new_message() {
     try {

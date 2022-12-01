@@ -1,7 +1,6 @@
 #ifndef MSG_LIB
 #define MSG_LIB
 #include<stdint.h>
-#include "list.h"
 
 typedef struct {
     uint8_t len;

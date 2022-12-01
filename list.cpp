@@ -1,5 +1,8 @@
-#include "list.h"
 #include <new>
+#include "msg_lib.h"
+#include "link.h"
+#include "list.h"
+
 
 //constructor
 List::List() { //creates datapath for thread
