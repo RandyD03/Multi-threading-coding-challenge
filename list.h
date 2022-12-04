@@ -13,8 +13,11 @@ public:
     size_t length;
     std::mutex lock;    // each list has their own lock because multiple locks may be in use at the same time
     message_t* list_pop();
+
+    //constructor
     List();
 };
 
 int list_push(List* dest, message_t* msg);
-#endif
+
+#endif /*list_h*/

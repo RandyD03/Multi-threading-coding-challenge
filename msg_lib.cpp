@@ -24,6 +24,7 @@ int send(uint8_t destination_id, message_t* msg) {
     return list_push(&msg_queues[destination_id], msg);
 }
 
+//BROKEN
 int recv(uint8_t receiver_id, message_t* msg) { //reciever_id would be itself
     msg = msg_queues[receiver_id].list_pop();
     if(msg == nullptr) return 1;
