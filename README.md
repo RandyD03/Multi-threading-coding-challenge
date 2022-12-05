@@ -1,5 +1,4 @@
 # Multi-threading Coding-Challenge
-First interview stage with Kepler: Coding Challenge
 
 This is a coding question. You may use C, or C++. Submit all your source code in a zipped archive as
 an e-mail attachment (please do not post your solution to a public code repository), including any
@@ -39,13 +38,3 @@ implementation of this function should set it to point to a message destined to
 receiver_id if one exists. A response code should be returned where 0 indicates
 success and non-0 indicates error.
 
-What we are evaluating in your solution:
-
-● Correctness (i.e., does it produce the correct results)
-
-● Consideration of embedded programming principles
-
-● Comprehensiveness of test cases
-
-● General cleanliness of the code (i.e., consistent formatting, proper use of comments and
-docstrings, appropriate use of functions, ease of understanding)
