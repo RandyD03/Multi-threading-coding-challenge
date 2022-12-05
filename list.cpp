@@ -1,6 +1,6 @@
-#include "msg_lib.h"
-#include "link.h"
-#include "list.h"
+#include "msg_lib.hpp"
+#include "link.hpp"
+#include "list.hpp"
 
 #include <new>
 

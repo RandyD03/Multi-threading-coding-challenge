@@ -1,10 +1,9 @@
-#include "msg_lib.h"
-#include "link.h"
-#include "list.h"
+#include "msg_lib.hpp"
+#include "link.hpp"
+#include "list.hpp"
+#include "globals.hpp"
 
 #include <new>
-
-extern List msg_queues[255];
 
 message_t *new_message() {
     try {
@@ -26,7 +25,7 @@ int send(uint8_t destination_id, message_t* msg) {
 }
 
 //BROKEN
-int recv(uint8_t receiver_id, message_t* msg) { //reciever_id would be itself
+int recv(uint8_t receiver_id, message_t*& msg) { //reciever_id would be itself
     msg = msg_queues[receiver_id].list_pop();
     if(msg == nullptr) return 1;
     return 0;
