@@ -1,5 +1,4 @@
 # Multi-threading Coding-Challenge
-First interview stage with Kepler: Coding Challenge
 
 This is a coding question. You may use C, or C++. Submit all your source code in a zipped archive as
 an e-mail attachment (please do not post your solution to a public code repository), including any
