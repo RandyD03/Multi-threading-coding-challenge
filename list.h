@@ -1,10 +1,11 @@
 #ifndef LIST_H
 #define LIST_H
 
+#include "list.h"
+
 #include <stdlib.h>
 #include <mutex>
 #include <thread>
-#include "list.h"
 
 class List {
 public:

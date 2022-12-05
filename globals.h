@@ -5,4 +5,4 @@
 #include "list.h"
 
 List msg_queues[255];   //each element can store one thread
-#endif
+#endif /*globals_h*/

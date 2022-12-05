@@ -8,4 +8,4 @@ public:
     message_t* msg;
     Link(message_t* newmsg);
 };
-#endif
+#endif /*link_h*/
