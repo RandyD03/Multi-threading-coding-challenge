@@ -1,4 +1,4 @@
-# Kepler-Coding-Challenge
+# Multi-threading Coding-Challenge
 First interview stage with Kepler: Coding Challenge
 
 This is a coding question. You may use C, or C++. Submit all your source code in a zipped archive as
