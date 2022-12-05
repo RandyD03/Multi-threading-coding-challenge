@@ -5,7 +5,7 @@ using namespace std;
 
 List msg_queues[NUM_THREAD_QUEUES];
 
-void thread_function(uint8_t queue_id, uint8_t recv_id, uint8_t message); // msg_queues[queue_id]
+void thread_function(uint8_t home_id, uint8_t recv_id, uint8_t message); // msg_queues[queue_id]
 
 int main() {
 
