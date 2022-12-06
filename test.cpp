@@ -1,3 +1,7 @@
+/*TEST FILE
+CREATED BY RANDY DING
+*/
+
 #include "globals.hpp"
 
 #include <iostream>
@@ -9,15 +13,17 @@ void thread_function(uint8_t home_id, uint8_t recv_id, uint8_t message); // msg_
 
 int main() {
 
+    //insert any threads you want to create
     std::thread threadobj1(thread_function, 0, 1,100);
     std::thread threadobj2(thread_function, 1, 0,200);
 
+    //join all threads here
     threadobj1.join();
     threadobj2.join();
     return 0;
 }
 
-//test function to randomly send and recieve msg
+//test function to send and recieve msg
 void thread_function(uint8_t home_id, uint8_t send_id, uint8_t message) {
         message_t* msg = new_message();
         if(new_message != nullptr) {
