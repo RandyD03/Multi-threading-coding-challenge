@@ -1,10 +1,6 @@
 # Multi-threading Coding-Challenge
 
-This is a coding question. You may use C, or C++. Submit all your source code in a zipped archive as
-an e-mail attachment (please do not post your solution to a public code repository), including any
-tests you write! In addition to submitting source code, include a brief description (no more than a
-paragraph or two) of any design decisions or tradeoffs you had to make. Clearly state any
-assumptions you make.
+This is a coding question. You may use C, or C++. 
 
 You are to design and implement a basic message passing library for an embedded system. In this
 system you should assume there are multiple threads, each with a unique identifier. These threads
