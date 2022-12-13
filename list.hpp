@@ -1,5 +1,5 @@
-#ifndef LIST_H
-#define LIST_H
+#ifndef LIST_HPP
+#define LIST_HPP
 
 #include "list.hpp"
 

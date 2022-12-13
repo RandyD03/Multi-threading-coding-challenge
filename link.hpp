@@ -1,5 +1,5 @@
-#ifndef LINK_H
-#define LINK_H
+#ifndef LINK_HPP
+#define LINK_HPP
 
 #include "msg_lib.hpp"
 

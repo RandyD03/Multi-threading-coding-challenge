@@ -1,5 +1,5 @@
-#ifndef GLOBALS_H
-#define GLOBALS_H
+#ifndef GLOBALS_HPP
+#define GLOBALS_HPP
 
 #include "link.hpp"
 #include "list.hpp"

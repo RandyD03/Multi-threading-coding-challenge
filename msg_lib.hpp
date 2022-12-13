@@ -1,5 +1,5 @@
-#ifndef MSG_LIB
-#define MSG_LIB
+#ifndef MSG_LIB_HPP
+#define MSG_LIB_HPP
 
 #include<stdint.h>
 
