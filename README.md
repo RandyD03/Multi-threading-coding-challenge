@@ -33,4 +33,5 @@ thread that wishes to receive a message. The msg argument is an output, and the
 implementation of this function should set it to point to a message destined to
 receiver_id if one exists. A response code should be returned where 0 indicates
 success and non-0 indicates error.
+![IMG_6717 (1)](https://user-images.githubusercontent.com/105885340/207221427-38a72baf-c5c9-4be3-85f9-b728c9181cb6.JPG)
 
